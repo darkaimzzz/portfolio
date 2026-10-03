@@ -24,7 +24,7 @@ I captained my school chess team, and I think about building the same way: a few
 
 | Piece | Project | What it is |
 |---|---|---|
-| ♔ King | [Mentary](https://waitlist-mentary.vercel.app) | Daily brain-training puzzles for kids. The company I'm building |
+| ♔ King | [Mentary](https://mentarywaitlist.vercel.app) | Daily brain-training puzzles for kids. The company I'm building |
 | ♕ Queen | [Planora](https://github.com/darkaimzzz/planora) | Group scheduling app. Authorisation enforced by 17 Postgres RLS policies, attacked by a 42-assertion audit suite |
 | ♖ Rook | [AgentPack](https://github.com/darkaimzzz/AgentPack) | Installs MCP servers across Claude Code, Codex and OpenCode, checks each one responds, rolls back on failure |
 | ♘ Knight | [Form Rescue](https://github.com/darkaimzzz/Form-Rescue) | Local-first browser extension that recovers lost form drafts |

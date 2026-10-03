@@ -41,7 +41,7 @@ export const projects: Project[] = [
     decision:
       'Privacy by construction. The waitlist form fails honestly when it is misconfigured instead of faking success, and the database grants only make the list write-only from the browser.',
     stack: ['TypeScript', 'React Native', 'Next.js', 'Supabase', 'Tailwind'],
-    links: [{ label: 'Join the waitlist', href: 'https://waitlist-mentary.vercel.app' }],
+    links: [{ label: 'Join the waitlist', href: 'https://mentarywaitlist.vercel.app' }],
   },
   {
     id: 'planora',

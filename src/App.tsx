@@ -68,9 +68,12 @@ export default function App() {
             <ul>{p.built.map((b) => <li key={b}>{b}</li>)}</ul>
             <h3>The hard call</h3>
             <p>{p.decision}</p>
-            {p.stats && (
+            {(p.stats || (p.id === 'mentary' && waitlist !== null)) && (
               <ul className="stats">
-                {p.stats.map((s) => <li key={s.label}><b>{s.value}</b>{s.label}</li>)}
+                {p.id === 'mentary' && waitlist !== null && (
+                  <li><b>{waitlist.toLocaleString()}</b>on the waitlist <span className="live">live</span></li>
+                )}
+                {p.stats?.map((s) => <li key={s.label}><b>{s.value}</b>{s.label}</li>)}
               </ul>
             )}
             <p className="stack">{p.stack.join(' · ')}</p>
