@@ -156,8 +156,7 @@ export const timeline = [
 ]
 
 export const nextMoves = [
-  { when: 'Now', what: 'Mentary waitlist drive, Form Rescue to the Chrome Web Store, AgentPack into the MCP community.' },
-  { when: 'Academy pursuit', what: 'Take Mentary from waitlist to real families, with an adaptive-difficulty model trained on puzzle performance.' },
-  { when: 'Open source', what: 'Turn Planora’s audit into a Supabase RLS attack tester anyone can run against their own project.' },
-  { when: 'Co-op', what: 'Work inside an AI-infrastructure company and learn how tools for developers get distributed at scale.' },
+  { when: 'Now', what: 'Getting what I’ve already built into real people’s hands, and learning from what they do with it.' },
+  { when: 'Academy', what: 'Go deep on one problem worth years of my time. Today that’s Mentary, but I’ll follow whichever problem pulls hardest.' },
+  { when: 'Co-op', what: 'Work at a company I believe in, close to the people building it, and learn how they think.' },
 ]

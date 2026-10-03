@@ -122,7 +122,7 @@ function Rig({ active }: { active: number }) {
     } else if (active === -1) {
       const t = clock.elapsedTime * 0.05
       pos = new THREE.Vector3(Math.sin(t) * 2, 11, 6 + Math.cos(t))
-      tgt = new THREE.Vector3(-2.5, 0, 0.5) // board sits right of the hero text
+      tgt = new THREE.Vector3(-3.4, 0, 0.5) // board sits right of the hero text
     } else {
       pos = new THREE.Vector3(-7, 6, 7)
       tgt = new THREE.Vector3(0, 0, 0)

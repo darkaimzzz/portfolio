@@ -59,7 +59,7 @@ npm run dev       # http://localhost:5173
 npm run build     # static output in dist/
 ```
 
-The live waitlist stat is optional. Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY` (the publishable key). Without them, or under 25 signups, it stays hidden.
+The live waitlist stat is optional. Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY` (the publishable key). Without them it stays hidden.
 
 <details>
 <summary>Supabase function</summary>

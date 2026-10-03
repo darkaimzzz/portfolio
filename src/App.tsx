@@ -7,7 +7,7 @@ const show3d =
   !matchMedia('(prefers-reduced-motion: reduce)').matches &&
   !!document.createElement('canvas').getContext('webgl2')
 
-// Live Mentary waitlist count (chip hidden under 25). Shows nothing unless the env vars and the waitlist_count() RPC exist (see README).
+// Live Mentary waitlist count. Shows nothing unless the env vars and the waitlist_count() RPC exist (see README).
 function useWaitlistCount() {
   const [n, setN] = useState<number | null>(null)
   useEffect(() => {
@@ -51,8 +51,7 @@ export default function App() {
           <h1>{NAME}</h1>
           <p className="lede">I build things and ship them: a kids’ learning startup, an Android app, developer tools and a browser extension, all live.</p>
           <ul className="chips">
-            <li><b>500+</b> users on my Discord bot</li>
-            {waitlist !== null && waitlist >= 25 && <li><b>{waitlist.toLocaleString()}</b> on the Mentary waitlist <span className="live">live</span></li>}
+            {waitlist !== null && <li><b>{waitlist.toLocaleString()}</b> on the Mentary waitlist <span className="live">live</span></li>}
             <li><b>4</b> shipped products</li>
           </ul>
           <p className="hint">Scroll. Each piece on the board is something I built.</p>
