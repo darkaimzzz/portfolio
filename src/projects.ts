@@ -106,6 +106,7 @@ export const projects: Project[] = [
       'A local-first browser extension that saves drafts only on sites you opt in to.',
       'Handles React and Vue forms, fields added after load, open shadow DOM and fields outside a form.',
       'A side-by-side review page before restoring, conflict detection and undo.',
+      'Submitted to Firefox Add-ons (in review).',
     ],
     decision:
       'Honest over clever. "Saved locally" appears only after the database transaction commits, and if a field cannot be matched with confidence you get a Copy button instead of a guess. No account, no server, no telemetry.',
