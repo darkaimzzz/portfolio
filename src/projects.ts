@@ -18,7 +18,7 @@ export type Project = {
 }
 
 export const NAME = 'Nishaad Bharaswadkar'
-export const EMAIL = '' // TODO: contact email (left blank on purpose)
+export const EMAIL = 'nishaadbharaswadkar@gmail.com'
 export const GITHUB = 'https://github.com/darkaimzzz'
 export const VIDEO = '' // TODO: link to your application video
 
