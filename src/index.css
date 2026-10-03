@@ -66,4 +66,5 @@ li { margin-bottom: 0.4em; }
   section, footer { margin-inline: 16px; }
   .panel { padding: 20px; min-height: auto; margin-block: 60vh; }
   .timeline li { grid-template-columns: 1fr; gap: 2px; }
+  .hint { display: none; }
 }

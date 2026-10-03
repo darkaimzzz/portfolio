@@ -112,7 +112,7 @@ function Squares({ highlight }: { highlight?: THREE.Vector3 }) {
 // active: -1 = hero overview, 0..n-1 = project stop, anything else = wide angle.
 function Rig({ active }: { active: number }) {
   const look = useRef(new THREE.Vector3())
-  useFrame(({ camera, clock }, dt) => {
+  useFrame(({ camera, clock, size }, dt) => {
     const p = projects[active]
     let pos: THREE.Vector3, tgt: THREE.Vector3
     if (p) {
@@ -121,8 +121,15 @@ function Rig({ active }: { active: number }) {
       pos = at.clone().add(new THREE.Vector3(1.6, 2.6, 4.4))
     } else if (active === -1) {
       const t = clock.elapsedTime * 0.05
-      pos = new THREE.Vector3(Math.sin(t) * 2, 11, 6 + Math.cos(t))
-      tgt = new THREE.Vector3(-3.4, 0, 0.5) // board sits right of the hero text
+      if (size.width < 700) {
+        // phones: whole board in the lower part of the screen, under the text
+        pos = new THREE.Vector3(Math.sin(t) * 1.5, 15, 13)
+        tgt = new THREE.Vector3(0, 0, -5)
+      } else {
+        pos = new THREE.Vector3(Math.sin(t) * 2, 11, 6 + Math.cos(t))
+        // board sits right of the hero text; narrower screens need a bigger shift
+        tgt = new THREE.Vector3(-3.4 * Math.min(1.25, 1440 / size.width), 0, 0.5)
+      }
     } else {
       pos = new THREE.Vector3(-7, 6, 7)
       tgt = new THREE.Vector3(0, 0, 0)
@@ -141,7 +148,7 @@ export default function Board({ active }: { active: number }) {
   return (
     <Canvas shadows dpr={[1, 1.5]} camera={{ position: [0, 11, 7], fov: 40 }}>
       <color attach="background" args={['#0b0b0e']} />
-      <fog attach="fog" args={['#0b0b0e', 10, 24]} />
+      <fog attach="fog" args={['#0b0b0e', 14, 34]} />
       <ambientLight intensity={0.35} />
       <directionalLight position={[4, 8, 3]} intensity={2} castShadow shadow-mapSize={[1024, 1024]} />
       <pointLight position={[-5, 3, -4]} intensity={8} color="#6a7cff" />
